@@ -1,0 +1,58 @@
+#
+# ------------------------------------------------ Relatorio Projeto Cliniq-IUL ------------------------------------------------
+#						             (Parte 1)
+#
+#
+# Neste projeto foi feito na tentativa de utilizar todo o conhecimento aquirido nas aulas de Sistemas Operativos
+# Utilizei várias formas de abordar os problemas de forma a poder aprender um pouco mais com isso
+#
+# No geral o pedido era a criação de um menu onde fosse possivel fazer a escolha do pretendido e, conforme a escolha, obter a informação pretendia
+#
+#
+# 1) cria_pacientes.sh
+#
+# No cria_pacientes.sh foi feita uma condição a verificar se o ficheiro existe e caso afirmativo apaga-o e logo de seguida cria o ficheiro em branco. 
+# Depois utilizo o cat para obter a informação do ficheiro, depois faço um grep para obter todas as linhas começadas por "a" seguida por um numero, faço um cut para obter a coluna 1 e a 5 (numero e nome do aluno). 
+# Por fim através de um while que faz o varrimento de todas as linhas (através do pipeline que iniciou no cat) de forma a ir buscar as informações nome, numero email e imprimo linha a linha a informação formatada do aluno
+#
+#
+# 2) cria_medico.sh
+#
+# No cria_medico.sh foi feito primeiro a verificação para ver se o ficheiro medicos.txt exite, e caso não eixsta, cria-o.
+# Depois verifica se o numero introduzido já existe no ficheiro dos medicos.txt. Caso não exista , ele grava os dados do medico que foram dados pelo utilizados no ficheiro. Caso exista dá um aviso a informar que o médico já está registado
+# Por fim mostra a listagem total dos medicos registados
+#
+#
+# 3) stats.sh
+#
+# No stats.sh foi feita duas verificações de forma a saber se o utilizador introduz 0, 1 ou 2 argumentos.
+# Se introduzir 0 argumentos , o scrip não faz nada.
+# Se introduzir 1 argumento dá a informação do numero de pacientes que moram na localidade introduzida sem a preocupação do case sensitive.
+# Se introduzir 2 argumentos dá a mesma informação dos pacientes mais a informaçãõ do numero de médicos com o saldo superior ao dado no segundo argumento
+# No caso de introduzir mais de 2 arguntos , os outros argumentos serão ignorados.
+# Foi utilizado a solicitação de SU visto que é dito no enunciado que o scrip é executado pelo o administrador do sistema. Este pedido de SU é feito na execução, através do menu (ponto 5)
+#
+#
+# 4) avalia_medicos.sh
+#
+# No avalia_medicos.sh foi feito uma verificação de forma a saber se o ficheiro lista_negra_medicos.txt existe e caso não exista, cria-o.
+# De seguida faz a verificação dos medicos segundo os requesitos e mostra-os no ecra, perguntado se deseja atualizar a lista ou não. Em caso afirmativo reescreve o ficheiro com a nova informação.
+# No final mostar a listagem dos medicos que ficaram em lista negra
+# Neste scrip foi utilizado tambem a mesma situação dos direitos de administrador que utilizado no stats.sh
+#
+#
+# 5) menu
+#
+# No menu.sh foi feito varios echo a mostrar as opções disponiveis e, através de um case, o utilizador pode escrever a opção pretendida. 
+# No caso da opção 2 é solicitado os argumentos para a introdução de um novo medico
+# No caso da opção 3 é solicitado acesso de administrador e respectivos argumentos. 
+# No caso da opção 4 apenas é solicitado o acesso de administrador
+#
+#
+# Notas Finais
+#
+# Os scripts foram testados de forma a verificar o correto funicionamento. De qualquer forma houve situações que não estão a ser verificadas , tais como o tipo de argumentos que estão a ser inseridos
+# A base para a elaboração foi essencialmente a materia dada na aula e tambem alguma pesquisa no Google
+#
+# Raul Rodrigues
+# 90287

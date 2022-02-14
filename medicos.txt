@@ -1,0 +1,5 @@
+João Vieira;98765;clinica geral;vieira@gmail.com;5;40;100
+Ana Correia;12345;dentista;aguiar@gmail.com;5;20;200
+Joaquim Miguel;123456;dentista;jaquin@gmail.com;5;3;50000
+Miguel Pedro;123;Otorrino;miguel@gmail.com;3;7;0400
+Raul;90287;tudo;raa@sapo.pt;0;0;0
